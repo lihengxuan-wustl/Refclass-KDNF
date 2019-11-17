@@ -1,0 +1,8 @@
+#BSUB -G seas-lab-juba
+#BSUB -n 3
+#BSUB -R "span[hosts=1]"
+#BSUB -J "adult"
+
+module add seas-lab-juba
+
+python run_3dnf_adult.py -i $LSB_JOBINDEX
